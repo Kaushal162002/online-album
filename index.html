@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Photo Album</h1>
+    </header>
+    <div class="full-img"id="FULLImgBOX">
+        <img src="images (1).jpeg" id="fullImg">
+        <span onclick="closeFULLImg()">X</span>
+    </div>
+    <div class="img-gallery">
+        <img src="images (1).jpeg" alt="virat kohli"onclick="openFULLImg(this.src)">
+        <img src="images (3).jpeg" alt="rinku"onclick="openFULLImg(this.src)">
+        <img src="images.jpeg" alt="Rohit sharma"onclick="openFULLImg(this.src)">
+        <img src="download.webp" alt="Rohit"onclick="openFULLImg(this.src)">
+    </div>
+    <nav class="crumbs">
+        <ol>
+          <li class="image"><a href="#">photos</a></li>
+          <li class="memeories"><a href="#">memories</a></li>
+          <li class="search"><a href="#">search</a></li>
+        </ol>
+      </nav>
+    
+    <script>
+        var FULLImgBOX=document.getElementById("FULLImgBOX");
+        var fullImg=document.getElementById("fullImg");
+        function openFULLImg(pic){
+            FULLImgBOX.style.display="flex";
+            fullImg.src=pic;
+        }
+        function closeFULLImg(){
+            FULLImgBOX.style.display="none";
+        }
+    </script>
+</body>
+</html>
